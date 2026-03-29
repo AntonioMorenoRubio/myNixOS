@@ -11,6 +11,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.niri
     ];
 
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
@@ -75,8 +76,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    layout = "eu";
   };
 
   # Enable CUPS to print documents.
