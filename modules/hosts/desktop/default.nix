@@ -7,7 +7,9 @@
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
+          extraSpecialArgs = { inherit self; };
           users.antonio = import ./_users/antonio.nix;
+          users.mama = import ./_users/mama.nix;
         };
       }
     ];

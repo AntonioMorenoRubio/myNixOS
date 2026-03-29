@@ -102,15 +102,17 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.antonio = {
-    isNormalUser = true;
-    description = "antonio";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    git
-      kdePackages.kate
-    #  thunderbird
-    ];
+  users.users = {
+    antonio = {
+      isNormalUser = true;
+      description = "antonio";
+      extraGroups = [ "networkmanager" "wheel" ];
+    };
+    mama = {
+      isNormalUser = true;
+      description = "mama";
+      extraGroups = [ "networkmanager" ];
+    };
   };
 
   # Install firefox.
