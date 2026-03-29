@@ -8,6 +8,7 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
   imports =
     [ # Include the results of the hardware scan.
 	self.nixosModules.fx506hm_Hardware
+	self.nixosModules.garbageCollection
 	self.nixosModules.niri
     ];
 

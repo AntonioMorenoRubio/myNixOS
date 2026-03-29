@@ -8,6 +8,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   imports =
     [ # Include the results of the hardware scan.
 	self.nixosModules.desktop_Hardware
+	self.nixosModules.garbageCollection
 	self.nixosModules.niri
     ];
 
