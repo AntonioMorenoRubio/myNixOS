@@ -85,16 +85,16 @@
           "Mod+F".maximize-column = {};
           "Mod+Shift+F".fullscreen-window = {};
           "Mod+C".center-column = {};
-          "Mod+Minus".set-column-width = "-10%";
-          "Mod+Plus".set-column-width = "+10%";
-          "Mod+Shift+Minus".set-window-height = "-10%";
-          "Mod+Shift+Plus".set-window-height = "+10%";
+          "Mod+KP_Subtract".set-column-width = "-10%";
+          "Mod+KP_Add".set-column-width = "+10%";
+          "Mod+Shift+KP_Subtract".set-window-height = "-10%";
+          "Mod+Shift+KP_Add".set-window-height = "+10%";
 
           # ── Consume/expulsar ventanas ─────────────────
           "Mod+Comma".consume-window-into-column = {};
           "Mod+Period".expel-window-from-column = {};
-          "Mod+Shift+Comma".consume-window-into-column = {};
-          "Mod+Shift+Period".expel-window-from-column = {};
+          "Mod+Shift+Comma".consume-or-expel-window-left = {};
+          "Mod+Shift+Period".consume-or-expel-window-right = {};
 
           # ── Capturas de pantalla ──────────────────────
           "Print".screenshot = {};

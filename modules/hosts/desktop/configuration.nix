@@ -9,6 +9,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
     [ # Include the results of the hardware scan.
 	self.nixosModules.desktop_Hardware
 	self.nixosModules.garbageCollection
+	self.nixosModules.fonts
 	self.nixosModules.niri
     ];
 
@@ -108,6 +109,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
       isNormalUser = true;
       description = "antonio";
       extraGroups = [ "networkmanager" "wheel" ];
+      shell = pkgs.fish;
+
     };
     mama = {
       isNormalUser = true;
@@ -118,6 +121,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

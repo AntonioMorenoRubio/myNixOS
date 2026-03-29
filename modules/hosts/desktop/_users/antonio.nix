@@ -2,6 +2,9 @@
     imports = [
         "${self}/modules/features/_home/base.nix"
         "${self}/modules/features/_home/development.nix"
+        "${self}/modules/features/_home/fish.nix"
+        "${self}/modules/features/_home/starship.nix"
+        "${self}/modules/features/_home/kitty.nix"
     ];
     home = {
         username = "antonio";

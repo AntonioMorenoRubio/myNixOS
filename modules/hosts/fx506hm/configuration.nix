@@ -9,6 +9,7 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
     [ # Include the results of the hardware scan.
 	self.nixosModules.fx506hm_Hardware
 	self.nixosModules.garbageCollection
+    self.nixosModules.fonts
 	self.nixosModules.niri
     ];
 
@@ -100,6 +101,8 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
