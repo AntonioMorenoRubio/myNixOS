@@ -36,61 +36,61 @@
             "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 
           # ── Ventanas ──────────────────────────────────
-          "Mod+Q".close-window = null;
-          "Mod+V".toggle-window-floating = null;
-          #"Mod+Shift+V".toggle-focus-floating = null;
+          "Mod+Q".close-window = {};
+          "Mod+V".toggle-window-floating = {};
+          #"Mod+Shift+V".toggle-focus-floating = {};
 
           # ── Foco (vim + flechas) ──────────────────────
-          "Mod+H".focus-column-left = null;
-          "Mod+L".focus-column-right = null;
-          "Mod+J".focus-window-down = null;
-          "Mod+K".focus-window-up = null;
-          "Mod+Left".focus-column-left = null;
-          "Mod+Right".focus-column-right = null;
-          "Mod+Down".focus-window-down = null;
-          "Mod+Up".focus-window-up = null;
+          "Mod+H".focus-column-left = {};
+          "Mod+L".focus-column-right = {};
+          "Mod+J".focus-window-down = {};
+          "Mod+K".focus-window-up = {};
+          "Mod+Left".focus-column-left = {};
+          "Mod+Right".focus-column-right = {};
+          "Mod+Down".focus-window-down = {};
+          "Mod+Up".focus-window-up = {};
 
           # ── Mover columnas/ventanas ───────────────────
-          "Mod+Ctrl+H".move-column-left = null;
-          "Mod+Ctrl+L".move-column-right = null;
-          "Mod+Ctrl+J".move-window-down = null;
-          "Mod+Ctrl+K".move-window-up = null;
+          "Mod+Ctrl+H".move-column-left = {};
+          "Mod+Ctrl+L".move-column-right = {};
+          "Mod+Ctrl+J".move-window-down = {};
+          "Mod+Ctrl+K".move-window-up = {};
 
           # ── Workspaces ────────────────────────────────
           # U/I = PageDown/PageUp en tu capa nav (n/m)
-          "Mod+U".focus-workspace-down = null;
-          "Mod+I".focus-workspace-up = null;
-          "Mod+Ctrl+U".move-column-to-workspace-down = null;
-          "Mod+Ctrl+I".move-column-to-workspace-up = null;
-          "Mod+Shift+U".move-workspace-down = null;
-          "Mod+Shift+I".move-workspace-up = null;
-          "Mod+Ctrl+Page_Down".move-column-to-workspace-down = null;
-          "Mod+Ctrl+Page_Up".move-column-to-workspace-up = null;
+          "Mod+U".focus-workspace-down = {};
+          "Mod+I".focus-workspace-up = {};
+          "Mod+Ctrl+U".move-column-to-workspace-down = {};
+          "Mod+Ctrl+I".move-column-to-workspace-up = {};
+          "Mod+Shift+U".move-workspace-down = {};
+          "Mod+Shift+I".move-workspace-up = {};
+          "Mod+Ctrl+Page_Down".move-column-to-workspace-down = {};
+          "Mod+Ctrl+Page_Up".move-column-to-workspace-up = {};
 
           # ── Tamaño de columnas ────────────────────────
-          "Mod+R".switch-preset-column-width = null;
-          "Mod+Shift+R".switch-preset-window-height = null;
-          "Mod+Ctrl+R".reset-window-height = null;
-          "Mod+F".maximize-column = null;
-          "Mod+Shift+F".fullscreen-window = null;
-          "Mod+C".center-column = null;
+          "Mod+R".switch-preset-column-width = {};
+          "Mod+Shift+R".switch-preset-window-height = {};
+          "Mod+Ctrl+R".reset-window-height = {};
+          "Mod+F".maximize-column = {};
+          "Mod+Shift+F".fullscreen-window = {};
+          "Mod+C".center-column = {};
           "Mod+Minus".set-column-width = "-10%";
           "Mod+Plus".set-column-width = "+10%";
           "Mod+Shift+Minus".set-window-height = "-10%";
           "Mod+Shift+Plus".set-window-height = "+10%";
 
           # ── Consume/expulsar ventanas ─────────────────
-          "Mod+Comma".consume-window-into-column = null;
-          "Mod+Period".expel-window-from-column = null;
+          "Mod+Comma".consume-window-into-column = {};
+          "Mod+Period".expel-window-from-column = {};
 
           # ── Capturas de pantalla ──────────────────────
-          "Print".screenshot = null;
-          "Alt+Print".screenshot-window = null;
-          "Ctrl+Print".screenshot-screen = null;
+          "Print".screenshot = {};
+          "Alt+Print".screenshot-window = {};
+          "Ctrl+Print".screenshot-screen = {};
 
           # ── Sistema ───────────────────────────────────
-          "Mod+F1".show-hotkey-overlay = null;
-          "Mod+Shift+E".quit = null;
+          "Mod+F1".show-hotkey-overlay = {};
+          "Mod+Shift+E".quit = {};
         };
       };
     };
