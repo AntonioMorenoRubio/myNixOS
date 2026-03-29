@@ -4,11 +4,20 @@
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
+
+    environment.variables = {
+      QS_ICON_THEME = "Papirus";
+    };
+
+    environment.systemPackages = with pkgs; [
+      papirus-icon-theme
+    ];
   };
 
   perSystem = { pkgs, lib, self', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
+
       settings = {
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
@@ -17,8 +26,7 @@
 
         input = {
           keyboard.xkb = {
-            layout = "es,us";
-            variant = "";
+            layout = "es,eu";
           };
           touchpad = {
             tap = {};
@@ -30,6 +38,9 @@
         layout.gaps = 5;
 
         binds = {
+          # ── Teclado ───────────────────────────────────
+          "Mod+Shift+Space".spawn-sh = "niri msg action switch-layout next";
+
           # ── Aplicaciones ──────────────────────────────
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+S".spawn-sh =
@@ -82,6 +93,8 @@
           # ── Consume/expulsar ventanas ─────────────────
           "Mod+Comma".consume-window-into-column = {};
           "Mod+Period".expel-window-from-column = {};
+          "Mod+Shift+Comma".consume-window-into-column = {};
+          "Mod+Shift+Period".expel-window-from-column = {};
 
           # ── Capturas de pantalla ──────────────────────
           "Print".screenshot = {};
