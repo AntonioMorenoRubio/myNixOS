@@ -10,6 +10,6 @@
       enable_audio_bell = false;
       copy_on_select = "clipboard";
     };
-    themeFile = "Catppuccin-Mocha";
+    themeFile = "rose-pine";
   };
 }
