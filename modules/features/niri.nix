@@ -26,7 +26,7 @@
 
         input = {
           keyboard.xkb = {
-            layout = "es,eu";
+            layout = "eu,es";
           };
           touchpad = {
             tap = {};
