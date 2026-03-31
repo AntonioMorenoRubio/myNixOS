@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     git
     podman-compose
+    jetbrains.rider
   ];
 
   programs.git = {
@@ -12,4 +13,6 @@
     enable = true;
     nix-direnv.enable = true;
   };
+
+  programs.vscode.enable = true;
 }
