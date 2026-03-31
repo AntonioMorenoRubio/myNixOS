@@ -12,6 +12,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.fonts
 	self.nixosModules.niri
 	self.nixosModules.wlClipboard
+	self.nixosModules.podman
     ];
 
 
@@ -109,7 +110,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
     antonio = {
       isNormalUser = true;
       description = "antonio";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "podman" ];
       shell = pkgs.fish;
 
     };
