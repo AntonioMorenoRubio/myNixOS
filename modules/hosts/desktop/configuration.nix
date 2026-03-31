@@ -129,6 +129,21 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = false;
+    nvidiaSettings = true;
+  };
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
