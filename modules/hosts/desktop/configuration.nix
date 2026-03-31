@@ -16,6 +16,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.steam
     ];
 
+  myNiri.package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri-desktop;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
