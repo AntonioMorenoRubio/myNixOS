@@ -11,6 +11,7 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.garbageCollection
     self.nixosModules.fonts
 	self.nixosModules.niri
+	self.nixosModules.wlClipboard
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

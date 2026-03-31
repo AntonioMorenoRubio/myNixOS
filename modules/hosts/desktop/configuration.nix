@@ -11,6 +11,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.garbageCollection
 	self.nixosModules.fonts
 	self.nixosModules.niri
+	self.nixosModules.wlClipboard
     ];
 
 
