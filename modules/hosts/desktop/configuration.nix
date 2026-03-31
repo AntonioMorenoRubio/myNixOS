@@ -13,8 +13,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.niri
 	self.nixosModules.wlClipboard
 	self.nixosModules.podman
+	self.nixosModules.steam
     ];
-
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -23,7 +23,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "odisea"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -128,6 +128,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  hardware.graphics.enable = true;
 
   hardware.nvidia = {
     modesetting.enable = true;
