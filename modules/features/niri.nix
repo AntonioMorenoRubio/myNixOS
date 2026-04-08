@@ -176,7 +176,7 @@
           "Mod+Shift+E".quit = {};
         };
         outputs."HDMI-A-1" = {
-          mode = "1920x1080@100.000";
+          mode = "1920x1080@60.000";
         };
         outputs."DVI-I-1" = {
           mode = "1920x1080@144.001";
