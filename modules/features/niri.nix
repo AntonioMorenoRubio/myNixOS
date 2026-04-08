@@ -175,6 +175,10 @@
           "Mod+F1".show-hotkey-overlay = {};
           "Mod+Shift+E".quit = {};
         };
+        outputs."HDMI-A-1" = {
+          mode = "1920x1080@100.000";
+          transform = "90";
+        };
         outputs."DVI-I-1" = {
           mode = "1920x1080@144.001";
         };
