@@ -16,6 +16,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.steam
     ];
 
+  nixpkgs.config.android_sdk.accept_license = true;
+
   myNiri.package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri-desktop;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

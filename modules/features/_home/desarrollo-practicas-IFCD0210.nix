@@ -24,8 +24,5 @@
     nix-direnv.enable = true;
   };
 
-  programs.vscode = {
-    enable = true;
-    defaultEditor = true;
-  };
+  programs.vscode.enable = true;
 }
