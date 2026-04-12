@@ -114,7 +114,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
     antonio = {
       isNormalUser = true;
       description = "antonio";
-      extraGroups = [ "networkmanager" "wheel" "docker" "podman" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "podman" "kvm" "adbusers" ];
       shell = pkgs.fish;
 
     };
