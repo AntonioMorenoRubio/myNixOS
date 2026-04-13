@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
   flake.nixosModules.garbageCollection = { config, lib, ... }: {
-    boot.loader.systemd-boot.configurationLimit = 3;
+    boot.loader.systemd-boot.configurationLimit = 10;
     nix.gc = {
         automatic = true;
         dates = "weekly";
