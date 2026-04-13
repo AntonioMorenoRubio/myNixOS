@@ -22,6 +22,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   myNiri.package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri-desktop;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = [ "root" "antonio" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
