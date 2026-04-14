@@ -5,6 +5,7 @@
         "${self}/modules/features/_home/fish.nix"
         "${self}/modules/features/_home/starship.nix"
         "${self}/modules/features/_home/kitty.nix"
+        "${self}/modules/features/_home/android.nix"
     ];
     home = {
         username = "antonio";

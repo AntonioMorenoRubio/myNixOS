@@ -12,15 +12,24 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
     self.nixosModules.fonts
 	self.nixosModules.niri
 	self.nixosModules.wlClipboard
+  self.nixosModules.podman
+	self.nixosModules.steam
+	self.nixosModules.devenv
     ];
 
+  nixpkgs.config.android_sdk.accept_license = true;
+
+  myNiri.package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri-desktop;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = [ "root" "antonio" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "nixos"; # Define your hostname.
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  networking.hostName = "iliada"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -30,8 +39,10 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
   # Enable networking
   networking.networkmanager.enable = true;
 
+  time.hardwareClockInLocalTime = true;
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
+  services.timesyncd.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "es_ES.UTF-8";
@@ -51,9 +62,9 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # Enable the KDE Plasma Desktop Environment.
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -91,7 +102,9 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
     antonio = {
       isNormalUser = true;
       description = "antonio";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "podman" "kvm" "adbusers" ];
+      shell = pkgs.fish;
+
     };
     mama = {
       isNormalUser = true;
@@ -107,6 +120,9 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  hardware.graphics.enable = true;
+
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
