@@ -3,6 +3,8 @@
     git
     podman-compose
     jetbrains.rider
+    jetbrains.idea
+    codex
   ];
 
   programs.git = {
