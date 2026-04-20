@@ -5,6 +5,7 @@
     jetbrains.rider
     jetbrains.idea
     codex
+    chromium
   ];
 
   programs.git = {
