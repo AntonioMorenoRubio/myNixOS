@@ -3,9 +3,10 @@
     git
     podman-compose
     jetbrains.rider
-    jetbrains.idea
+    jetbrains.idea-oss
     codex
     chromium
+    tmux
   ];
 
   programs.git = {
