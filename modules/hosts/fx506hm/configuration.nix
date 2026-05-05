@@ -16,6 +16,7 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.steam
 	self.nixosModules.devenv
 	self.nixosModules.games
+	inputs.nixos-hardware.nixosModules.asus-fx506hm
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
