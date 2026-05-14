@@ -1,10 +1,19 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    # DevOps
     git
+    gh
+    podman
+    podman-desktop
+    podman-tui
     podman-compose
+
+    # IDEs
     jetbrains.rider
     jetbrains.idea-oss
-    codex
+    jetbrains.webstorm
+
+    # Others
     chromium
     tmux
   ];
