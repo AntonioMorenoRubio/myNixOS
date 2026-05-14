@@ -15,6 +15,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.podman
 	self.nixosModules.steam
 	self.nixosModules.devenv
+  self.nixosModules.aagl
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;

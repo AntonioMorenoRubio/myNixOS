@@ -13,6 +13,11 @@
     };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix/release-25.11"; # o sigue "main" para unstable
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
