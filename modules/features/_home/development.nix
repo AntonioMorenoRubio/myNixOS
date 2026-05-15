@@ -15,6 +15,8 @@
 
     # Others
     chromium
+    tree
+    htop
     tmux
   ];
 
