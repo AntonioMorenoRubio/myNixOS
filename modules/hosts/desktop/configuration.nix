@@ -16,6 +16,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.steam
 	self.nixosModules.devenv
   self.nixosModules.aagl
+  self.nixosModules.reliquaryArchiver
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
@@ -145,6 +146,8 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  services.reliquary-archiver.enable = true;
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
