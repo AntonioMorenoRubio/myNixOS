@@ -18,6 +18,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.aagl
   self.nixosModules.reliquaryArchiver
   self.nixosModules.minecraft
+  self.nixosModules.communications
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
