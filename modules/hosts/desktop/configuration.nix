@@ -20,6 +20,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.minecraft
   self.nixosModules.communications
   self.nixosModules.vial
+  self.nixosModules.lutris
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
