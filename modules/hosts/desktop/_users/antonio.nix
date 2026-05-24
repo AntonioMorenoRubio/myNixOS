@@ -1,4 +1,4 @@
-{ self, pkgs, ... }: {
+{ self, pkgs, config, ... }: {
     imports = [
         "${self}/modules/features/_home/base.nix"
         "${self}/modules/features/_home/development.nix"
@@ -9,11 +9,28 @@
     home = {
         username = "antonio";
         homeDirectory = "/home/antonio";
+        file."Projects".source = config.lib.file.mkOutOfStoreSymlink "/mnt/PROFESIONAL/Projects";
         stateVersion = "25.11";
     };
 
     programs.git.settings.user = {
         name = "AntonioMorenoRubio";
         email = "amrinformatica10@gmail.com";
+    };
+
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = false;
+      desktop     = "${config.home.homeDirectory}/Escritorio";
+      download    = "${config.home.homeDirectory}/Descargas";
+      templates   = "${config.home.homeDirectory}/Plantillas";
+      publicShare = "${config.home.homeDirectory}/Público";
+      documents   = "${config.home.homeDirectory}/Documentos";
+      music       = "${config.home.homeDirectory}/Música";
+      pictures    = "${config.home.homeDirectory}/Imágenes";
+      videos      = "${config.home.homeDirectory}/Vídeos";
+      extraConfig = {
+        XDG_PROJECTS_DIR = "/mnt/PROFESIONAL/Projects";
+      };
     };
 }
