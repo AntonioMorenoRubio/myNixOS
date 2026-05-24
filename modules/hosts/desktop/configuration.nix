@@ -21,6 +21,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.communications
   self.nixosModules.vial
   self.nixosModules.lutris
+  self.nixosModules.autofirma
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;

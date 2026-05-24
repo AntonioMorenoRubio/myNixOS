@@ -18,6 +18,12 @@
       url = "github:ezKEa/aagl-gtk-on-nix/release-25.11"; # o sigue "main" para unstable
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    autofirma-nix = {
+      url = "github:nix-community/autofirma-nix";  # For nixpkgs-unstable
+      # url = "github:nix-community/autofirma-nix/release-25.05";  # For NixOS 25.05
+      inputs.nixpkgs.follows = "unstable";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
