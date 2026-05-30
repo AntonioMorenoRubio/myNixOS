@@ -24,6 +24,11 @@
       # url = "github:nix-community/autofirma-nix/release-25.05";  # For NixOS 25.05
       inputs.nixpkgs.follows = "unstable";
     };
+
+    nvim-config = {
+      url = "github:AntonioMorenoRubio/nvim-config";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);

@@ -7,7 +7,7 @@
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = { inherit self; };
+          extraSpecialArgs = { inherit self inputs; };
           users.antonio = import ./_users/antonio.nix;
           users.mama = import ./_users/mama.nix;
         };
