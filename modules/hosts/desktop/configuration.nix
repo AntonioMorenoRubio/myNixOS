@@ -5,6 +5,10 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   imports =
     [ # Include the results of the hardware scan.
 	self.nixosModules.desktop_Hardware
@@ -23,6 +27,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.lutris
   self.nixosModules.autofirma
   self.nixosModules.flatpak
+  self.nixosModules.obsidian
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
@@ -139,9 +144,6 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   programs.firefox.enable = true;
 
   programs.fish.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   hardware.graphics.enable = true;
 

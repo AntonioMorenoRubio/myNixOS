@@ -3,7 +3,6 @@
     floorp-bin
     thunderbird
     kdePackages.kate
-    obsidian
     bitwarden-desktop
     bitwarden-cli
   ];

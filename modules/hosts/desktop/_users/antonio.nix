@@ -2,7 +2,7 @@
     imports = [
         "${self}/modules/features/_home/base.nix"
         "${self}/modules/features/_home/development.nix"
-        "${self}/modules/features/_home/neovim.nix"
+        #"${self}/modules/features/_home/neovim.nix"
         "${self}/modules/features/_home/fish.nix"
         "${self}/modules/features/_home/starship.nix"
         "${self}/modules/features/_home/kitty.nix"
@@ -21,6 +21,7 @@
 
     xdg.userDirs = {
       enable = true;
+      setSessionVariables = true;
       createDirectories = false;
       desktop     = "${config.home.homeDirectory}/Escritorio";
       download    = "${config.home.homeDirectory}/Descargas";
@@ -30,8 +31,6 @@
       music       = "${config.home.homeDirectory}/Música";
       pictures    = "${config.home.homeDirectory}/Imágenes";
       videos      = "${config.home.homeDirectory}/Vídeos";
-      extraConfig = {
-        XDG_PROJECTS_DIR = "/mnt/PROFESIONAL/Projects";
-      };
+      projects    = "/mnt/PROFESIONAL/Projects";
     };
 }
