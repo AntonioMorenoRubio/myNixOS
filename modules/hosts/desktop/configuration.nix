@@ -151,6 +151,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # Drivers for GTX 970
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
