@@ -6,6 +6,8 @@
         "${self}/modules/features/_home/fish.nix"
         "${self}/modules/features/_home/starship.nix"
         "${self}/modules/features/_home/kitty.nix"
+        "${self}/modules/features/_home/yt-dlp.nix"
+        "${self}/modules/features/_home/openai-whisper.nix"
     ];
     home = {
         username = "antonio";
