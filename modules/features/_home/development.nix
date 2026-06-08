@@ -8,6 +8,9 @@
     podman-tui
     podman-compose
 
+    # SDKs
+    dotnet-sdk_10
+
     # IDEs
     jetbrains.rider
     jetbrains.idea-oss
