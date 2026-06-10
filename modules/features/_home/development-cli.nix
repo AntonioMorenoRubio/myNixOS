@@ -11,13 +11,7 @@
     # SDKs
     dotnet-sdk_10
 
-    # IDEs
-    jetbrains.rider
-    jetbrains.idea-oss
-    jetbrains.webstorm
-
-    # Others
-    chromium
+    # CLI tools
     tree
     htop
     tmux
@@ -32,6 +26,4 @@
     silent = true;
     nix-direnv.enable = true;
   };
-
-  programs.vscode.enable = true;
 }
