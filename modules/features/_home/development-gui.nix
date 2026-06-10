@@ -1,5 +1,8 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    # Containerization
+    podman-desktop
+
     # IDEs
     jetbrains.rider
     jetbrains.idea-oss

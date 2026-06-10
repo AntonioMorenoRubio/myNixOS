@@ -4,7 +4,6 @@
     git
     gh
     podman
-    podman-desktop
     podman-tui
     podman-compose
 
