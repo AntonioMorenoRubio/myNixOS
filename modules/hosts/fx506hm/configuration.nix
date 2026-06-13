@@ -18,6 +18,7 @@ flake.nixosModules.fx506hm_Configuration = { config, pkgs, lib, ... }: {
 	self.nixosModules.games
 	inputs.nixos-hardware.nixosModules.asus-fx506hm
   self.nixosModules.communications
+  self.nixosModules.remoteDesktop
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;

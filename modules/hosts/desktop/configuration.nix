@@ -29,6 +29,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.flatpak
   self.nixosModules.obsidian
   self.nixosModules.android
+  self.nixosModules.remoteDesktop
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
