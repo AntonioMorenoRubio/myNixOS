@@ -9,6 +9,7 @@
 
     # SDKs
     dotnet-sdk_10
+    nodejs
 
     # CLI tools
     tree
