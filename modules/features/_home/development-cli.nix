@@ -15,6 +15,7 @@
     tree
     htop
     tmux
+    rtk
   ];
 
   programs.git = {
