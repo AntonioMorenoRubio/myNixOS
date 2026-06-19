@@ -1,6 +1,7 @@
 { self, pkgs, config, ... }: {
     imports = [
         "${self}/modules/features/_home/base.nix"
+        "${self}/modules/features/_home/development-ai.nix"
         "${self}/modules/features/_home/development-cli.nix"
         "${self}/modules/features/_home/development-gui.nix"
         #"${self}/modules/features/_home/neovim.nix"
