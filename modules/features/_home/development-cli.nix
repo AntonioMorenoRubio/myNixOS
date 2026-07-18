@@ -3,6 +3,9 @@
     # DevOps
     git
     gh
+    jujutsu
+    jj-starship
+
     podman
     podman-tui
     podman-compose
