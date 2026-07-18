@@ -1,10 +1,10 @@
 { self, inputs, ... }: {
   flake.nixosModules.amule = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-        amule
-        amule-gui
-        amule-web
-        amule-daemon
+        inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.amule
+        inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.amule-gui
+        inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.amule-web
+        inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.amule-daemon
     ];
   };
 }
