@@ -32,6 +32,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.remoteDesktop
   self.nixosModules.rss
   self.nixosModules.office
+  self.nixosModules.amule
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
