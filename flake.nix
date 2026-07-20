@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    reliquary-archiver-nix-module = {
+      url = "git+https://github.com/daanturo/reliquary-archiver-nix-module.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     autofirma-nix = {
       url = "github:nix-community/autofirma-nix";  # For nixpkgs-unstable
       # url = "github:nix-community/autofirma-nix/release-25.05";  # For NixOS 25.05

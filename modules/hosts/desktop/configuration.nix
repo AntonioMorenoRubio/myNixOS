@@ -161,8 +161,6 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  services.reliquary-archiver.enable = true;
-
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     GBM_BACKEND = "nvidia-drm";
