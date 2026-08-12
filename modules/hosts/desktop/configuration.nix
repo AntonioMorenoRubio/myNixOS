@@ -33,6 +33,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.rss
   self.nixosModules.office
   self.nixosModules.amule
+  self.nixosModules.foundryvtt
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
@@ -134,7 +135,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
     antonio = {
       isNormalUser = true;
       description = "antonio";
-      extraGroups = [ "networkmanager" "wheel" "docker" "podman" "kvm" "adbusers" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "podman" "kvm" "adbusers" "foundryvtt" ];
       shell = pkgs.fish;
 
     };

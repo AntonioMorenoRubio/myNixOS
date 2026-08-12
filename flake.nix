@@ -30,6 +30,8 @@
       inputs.nixpkgs.follows = "unstable";
     };
 
+    foundryvtt.url = "github:reckenrode/nix-foundryvtt";
+
     # nvim-config = {
     #   url = "github:AntonioMorenoRubio/nvim-config";
     #   inputs.nixpkgs.follows = "nixpkgs";
