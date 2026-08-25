@@ -5,7 +5,7 @@
 
     # IDEs
     jetbrains.rider
-    jetbrains.idea-oss
+    jetbrains.idea
     jetbrains.webstorm
 
     # Browsers for Web Development
