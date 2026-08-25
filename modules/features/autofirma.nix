@@ -9,7 +9,7 @@
 
     # DNIeRemote integration for using phone as NFC reader
     programs.dnieremote = {
-        enable = true;
+        enable = false;
     };
     # Note: The Android app may not be available on Google Play for modern devices.
     # See the troubleshooting guide for installation alternatives.
