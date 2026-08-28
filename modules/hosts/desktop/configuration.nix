@@ -36,6 +36,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.foundryvtt
   self.nixosModules.wonderdraft
   self.nixosModules.dungeondraft
+  self.nixosModules.multimedia
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
