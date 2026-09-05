@@ -11,6 +11,7 @@
         "${self}/modules/features/_home/yt-dlp.nix"
         "${self}/modules/features/_home/openai-whisper.nix"
         "${self}/modules/features/_home/gurps.nix"
+        "${self}/modules/features/_home/campaign-cartographer.nix"
     ];
     home = {
         username = "antonio";

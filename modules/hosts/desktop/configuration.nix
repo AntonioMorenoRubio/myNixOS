@@ -155,7 +155,10 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
 
   programs.fish.enable = true;
 
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;  # clave: sin esto, Wine no encuentra libs GL de 32-bit
+  };
 
   hardware.nvidia = {
     modesetting.enable = true;

@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
+{ self, pkgs, ... }: {
   home.packages = with pkgs; [
-    gcs
+    self.inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.gcs
   ];
 }
