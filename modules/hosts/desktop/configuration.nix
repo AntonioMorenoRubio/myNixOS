@@ -38,6 +38,7 @@ flake.nixosModules.desktop_Configuration = { config, pkgs, lib, ... }: {
   self.nixosModules.dungeondraft
   self.nixosModules.multimedia
   self.nixosModules.media-editing
+  self.nixosModules.ibkr
     ];
 
   nixpkgs.config.android_sdk.accept_license = true;
