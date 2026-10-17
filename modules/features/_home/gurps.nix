@@ -2,13 +2,13 @@
   home.packages = with pkgs; [
     (stdenv.mkDerivation rec {
     pname = "gcs";
-    version = "5.51.0";
+    version = "5.54.1";
     author = "richardwilkes";
 
     # Descargamos el ejecutable precompilado oficial de Linux
     src = fetchurl {
       url = "https://github.com/${author}/${pname}/releases/download/v${version}/${pname}-${version}-linux-amd64.tgz";
-      hash = "sha256-Gm/8OBUsRGx1NFngb6gl+A4REYFRXyvExC0NEyvohZo=";
+      hash = "sha256-Xaczw4Kq8/+Nuj70mYGpK29hSpJPvkSNVplQeMlEZSU=";
     };
 
     sourceRoot = ".";
