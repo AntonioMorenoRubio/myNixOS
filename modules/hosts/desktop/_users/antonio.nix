@@ -12,6 +12,7 @@
         "${self}/modules/features/_home/openai-whisper.nix"
         "${self}/modules/features/_home/gurps.nix"
         "${self}/modules/features/_home/campaign-cartographer.nix"
+        "${self}/modules/features/_home/ia-bigdata.nix"
     ];
     home = {
         username = "antonio";
